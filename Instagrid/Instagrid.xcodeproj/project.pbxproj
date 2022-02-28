@@ -14,6 +14,7 @@
 		8374A4DE276741370027ED44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8374A4DC276741370027ED44 /* LaunchScreen.storyboard */; };
 		8383AA7727674CB50081B599 /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8383AA7527674CB50081B599 /* ThirstySoftRegular.otf */; };
 		8383AA7827674CB50081B599 /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8383AA7627674CB50081B599 /* Delm-Medium.otf */; };
+		83995FD627CCD3D900037DC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83995FD527CCD3D900037DC2 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8374A4DF276741370027ED44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8383AA7527674CB50081B599 /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		8383AA7627674CB50081B599 /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
+		83995FD527CCD3D900037DC2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		8374A4D0276741360027ED44 /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				8374A4D7276741360027ED44 /* Main.storyboard */,
-				8374A4D5276741360027ED44 /* ViewController.swift */,
-				8374A4DC276741370027ED44 /* LaunchScreen.storyboard */,
-				8374A4D1276741360027ED44 /* AppDelegate.swift */,
-				8374A4DA276741370027ED44 /* Assets.xcassets */,
-				8383AA7627674CB50081B599 /* Delm-Medium.otf */,
-				8383AA7527674CB50081B599 /* ThirstySoftRegular.otf */,
-				8374A4DF276741370027ED44 /* Info.plist */,
+				83995FD427CCD26300037DC2 /* Controller */,
+				83995FD327CCD25B00037DC2 /* Ressources */,
+				83995FD127CCD24B00037DC2 /* Views */,
+				83995FD827CCE4CA00037DC2 /* Extensions */,
 			);
 			path = Instagrid;
+			sourceTree = "<group>";
+		};
+		83995FD127CCD24B00037DC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8374A4D7276741360027ED44 /* Main.storyboard */,
+				8374A4DC276741370027ED44 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83995FD327CCD25B00037DC2 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				83995FD727CCD48F00037DC2 /* Fonts */,
+				8374A4D1276741360027ED44 /* AppDelegate.swift */,
+				8374A4DA276741370027ED44 /* Assets.xcassets */,
+				8374A4DF276741370027ED44 /* Info.plist */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		83995FD427CCD26300037DC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8374A4D5276741360027ED44 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		83995FD727CCD48F00037DC2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8383AA7627674CB50081B599 /* Delm-Medium.otf */,
+				8383AA7527674CB50081B599 /* ThirstySoftRegular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		83995FD827CCE4CA00037DC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				83995FD527CCD3D900037DC2 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8374A4D6276741360027ED44 /* ViewController.swift in Sources */,
+				83995FD627CCD3D900037DC2 /* Extensions.swift in Sources */,
 				8374A4D2276741360027ED44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +339,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XL3LF6CDGS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = Instagrid/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,7 +367,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XL3LF6CDGS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = Instagrid/Ressources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
