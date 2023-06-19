@@ -12,10 +12,10 @@ extension UIView {
     
     // Permet de transformer une View en Image
     func asImage() -> UIImage {
-            let renderer = UIGraphicsImageRenderer(bounds: bounds)
-            return renderer.image { rendererContext in
-                layer.render(in: rendererContext.cgContext)
-            }
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
     }
     
     // Permet d'ajouter une couleur de fonds à notre StackView
