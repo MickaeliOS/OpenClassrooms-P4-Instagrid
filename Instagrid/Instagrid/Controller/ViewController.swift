@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         swipeLabel2.textColor = UIColor(white: 1.0, alpha: 1.0)
         
         // On choisit une disposition par défaut
-        pressDispositionButtons(dispositionButtons[0])
+        changeDisposition(sender: dispositionButtons[currentDispositionButton])
         
         // On controle le changement d'orientation afin d'activer le bon swipe
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
@@ -66,29 +66,7 @@ class ViewController: UIViewController {
     
     // Action des boutons de dispositions
     @IBAction func pressDispositionButtons(_ sender: UIButton) {
-        // On part sur une base avec tous les boutons d'affichés afin de gérer tous les cas
-        allVisible(buttonList: imagesPickersButtonsList)
-        
-        currentDispositionButton = sender.tag
-        sender.imageView?.isHidden = false
-        
-        // On cache l'image du précédent bouton de disposition
-        for index in 0...2 {
-            if index != sender.tag {
-                dispositionButtons[index].imageView?.isHidden = true
-            }
-        }
-        
-        switch sender.tag {
-            case 0:
-                imagesPickersButtonsList[1].isHidden = true
-            case 1:
-                imagesPickersButtonsList[3].isHidden = true
-            case 2:
-                allVisible(buttonList: imagesPickersButtonsList)
-            default:
-                allVisible(buttonList: imagesPickersButtonsList)
-            }
+        changeDisposition(sender: sender)
     }
     
     // Action du swipe (Up ou Left)
@@ -129,7 +107,35 @@ class ViewController: UIViewController {
         }
         
         // On remet la précédente disposition, car on la perdait lors du switch de mode
-        pressDispositionButtons(dispositionButtons[currentDispositionButton])
+        changeDisposition(sender: dispositionButtons[currentDispositionButton])
+    }
+    
+    private func changeDisposition(sender: UIButton) {
+        // On part sur une base avec tous les boutons d'affichés afin de gérer tous les cas
+        allVisible(buttonList: imagesPickersButtonsList)
+        
+        currentDispositionButton = sender.tag
+        //sender.imageView?.isHidden = false
+        sender.setImage(UIImage(named: "Selected"), for: .normal)
+        
+        // On cache l'image du précédent bouton de disposition
+        for index in 0...2 {
+            if index != sender.tag {
+                //dispositionButtons[index].imageView?.isHidden = true
+                dispositionButtons[index].setImage(nil, for: .normal)
+            }
+        }
+        
+        switch sender.tag {
+        case 0:
+            imagesPickersButtonsList[1].isHidden = true
+        case 1:
+            imagesPickersButtonsList[3].isHidden = true
+        case 2:
+            allVisible(buttonList: imagesPickersButtonsList)
+        default:
+            allVisible(buttonList: imagesPickersButtonsList)
+        }
     }
     
     // Permet d'afficher tous les boutons en paramètre
