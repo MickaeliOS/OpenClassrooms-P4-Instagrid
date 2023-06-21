@@ -10,4 +10,4 @@ I've learned valuable skills like UIStackViews, UIButtons, UISwipeGestureRecogni
 
 Join me in exploring the creative possibilities of Instagrid and share your feedback on this exciting project!
 
-![Model](Divers/Instagrid_1.png)](https://github.com/MickaeliOS/OpenClassrooms-P4-Instagrid/blob/master/Divers/Instragrid_1.png)
+![Model](Divers/Instagrid_1.png)](https://github.com/MickaeliOS/OpenClassrooms-P4-Instagrid/blob/master/Divers/Instagrid_1.png)
